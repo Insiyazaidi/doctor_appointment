@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import {toast}  from "react-toastify"
 export const AppContext = createContext();
 const AppContextProvider=(props)=>{
-const backendurl = import.meta.env.VITE_BACKEND_URL
+const backendurl = "https://doctor-appointment-backend-d6t9.onrender.com"
     const currencysymbol = '$'
 const [token , Settoken] = useState(localStorage.getItem("token")?localStorage.getItem("token") :false )
 const [doctors , Setdoctors] = useState([])
