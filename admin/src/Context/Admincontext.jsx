@@ -10,7 +10,7 @@ const Admincontextprovider = (props)=>{
 
     const[atoken , Setatoken] = useState(localStorage.getItem("atoken")? localStorage.getItem("atoken") : "")
     const [ doctors , Setdoctors] = useState([])
-    const backendurl = import.meta.env.VITE_BACKEND_URL
+    const backendurl = "https://doctor-appointment-backend-d6t9.onrender.com"
    const getalldoctors =async ()=>{
 try{
 const {data} =  await axios.post(backendurl+"/api/admin/all-doctors" , {} , {headers:{atoken}})
