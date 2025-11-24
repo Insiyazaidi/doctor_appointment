@@ -10,7 +10,7 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Dashboard from './Pages/Admin/Dashboard';
 import Allappointments from './Pages/Admin/Allappointments';
-import Adddoctor from './Pages/Admin/adddoctor';
+import Adddoctor from './Pages/Admin/Adddoctor';
 import Doctorslist from './Pages/Admin/Doctorslist';
 const App = () => {
     const {atoken} = useContext(Admincontext)
