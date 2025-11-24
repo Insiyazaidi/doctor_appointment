@@ -6,7 +6,7 @@ import { Route } from 'react-router';
 import { Routes } from 'react-router';
 import { Appcontext } from './Context/Appcontext';
 import { Admincontext } from './Context/Admincontext';
-import Navbar from './components/navbar';
+import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Dashboard from './Pages/Admin/Dashboard';
 import Allappointments from './Pages/Admin/Allappointments';
