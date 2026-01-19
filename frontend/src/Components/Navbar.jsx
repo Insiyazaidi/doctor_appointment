@@ -36,10 +36,11 @@ const Navbar = () => {
                       <p  onClick={()=>navigate("my-appointments")} className='hover text-black cursor pointer'>My Appointment</p>
                         <p  onClick={logout} className='hover text-black cursor pointer'>Logout</p>
                     </div>
-                  
+                
                 </div>
                 </div>:<button className='bg-primary text-white px-8 py-3 rounded-full font-light hidden md:block' onClick={()=>navigate("/login")}>Create account</button>
             }
+
             <img onClick={()=>Setshowmenu(true)} className='w-6 md:hidden mt-1' src={assets.menu_icon}></img>
 <div className={` ${shownmenu ? "fixed w-full": "h-0 w-0"} md:hidden right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all`}>
     <div className='flex items-center justify-between px-5 py-6'>
