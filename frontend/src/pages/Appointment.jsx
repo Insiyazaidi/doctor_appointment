@@ -26,7 +26,7 @@ Setdocinfo(docinfo)
  const getavailableslot = async () => {
    Setdocslots([]);
    const today = new Date();
-   const alldays = [];
+   const alldays = [];   // 7 days - hr din ke solts store krega .. 
 
    for (let i = 0; i < 7; i++) {    // yeh loop 7 bar chlega aur top to bottom hm ek run m ek day ko fix krrhe hoge 
      const currdate = new Date(today);
@@ -39,7 +39,7 @@ Setdocinfo(docinfo)
      if (i === 0) {
 //       // today
       const now = new Date();
-      if (now.getHours() < 10) {
+      if (now.getHours() < 10) {l
          starttime.setHours(10, 0, 0, 0); // before 10 AM → start at 10 AM
        } else {
 //         // round up to next half-hour slot
@@ -49,7 +49,8 @@ Setdocinfo(docinfo)
          if (now.getMinutes() >= 30) next.setHours(now.getHours() + 1);
          starttime.setHours(next.getHours(), next.getMinutes(), 0, 0);
        }
-     } else {
+     } 
+     else {
 //       // future days start from 10 AM
        starttime.setHours(10, 0, 0, 0);
      }
