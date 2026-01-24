@@ -39,7 +39,7 @@ Setdocinfo(docinfo)
      if (i === 0) {
 //       // today
       const now = new Date();
-      if (now.getHours() < 10) {l
+      if (now.getHours() < 10) {
          starttime.setHours(10, 0, 0, 0); // before 10 AM → start at 10 AM
        } else {
 //         // round up to next half-hour slot
