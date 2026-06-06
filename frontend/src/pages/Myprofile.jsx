@@ -43,14 +43,14 @@ else{
 {
   isedit?<label htmlFor='image'>
     <div className='inline-block relative cursor-pointer' >
-      <img className='w-36 rounded opacity-50' src={image?URL.createObjectURL(image):userdata.image || assets.bydefaultprofile}></img>
+      <img className='w-36 rounded opacity-50' src={image?URL.createObjectURL(image):userdata.image || assets.doc6}></img>
       <img className='w-10 absolute bottom-12 right-12 ' src={image?" ":assets.upload_icon}></img>
     </div>
     <input onChange={(e)=>Setimage(e.target.files[0])} type='file' id="image" hidden></input>
   </label>
   
   
-  :<img className='w-36 rounded' src={userdata.image|| assets.bydefaultprofile}></img>
+  :<img className='w-36 rounded' src={userdata.image|| assets.doc6}></img>
 }
 
 
