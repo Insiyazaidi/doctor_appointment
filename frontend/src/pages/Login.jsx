@@ -60,18 +60,18 @@ Settoken(data.token)
  {
   state==="sign up" &&   <div className='w-full'>
     <p>Full Name</p>
-    <input   className='border -border-zinc-300 rounded w-full p-2 mt-1' type='text' onChange={(e)=> Setname (e.target.value)} required></input>
+    <input   className='border -border-zinc-300 rounded w-full p-2 mt-1' type='text' onChange={(e)=> Setname (e.target.value)} value={name} required></input>
   </div>
  }
  
 
     <div className='w-full'>
     <p>Email</p>
-    <input  className='border -border-zinc-300 rounded w-full p-2 mt-1' type='email' onChange={(e)=> Setemail (e.target.value)} required></input>
+    <input  className='border -border-zinc-300 rounded w-full p-2 mt-1' type='email' onChange={(e)=> Setemail (e.target.value)} value={email} required></input>
   </div>
    <div className='w-full'>
     <p>Password</p>
-    <input  className='border -border-zinc-300 rounded w-full p-2 mt-1' type='password' onChange={(e)=> Setpassword(e.target.value)} required></input>
+    <input  className='border -border-zinc-300 rounded w-full p-2 mt-1' type='password' onChange={(e)=> Setpassword(e.target.value)} value={password} required></input>
   </div>
  <button type='submit' className='bg-primary text-white w-full py-2 rounded-md text-base'>{state==="sign up" ? "Create Account" :"Login"}</button>
 {

@@ -26,7 +26,7 @@ Setdocinfo(docinfo)
  const getavailableslot = async () => {
    Setdocslots([]);
    const today = new Date();
-   const alldays = [];   // 7 days - hr din ke solts store krega .. 
+   const alldays = [];   // 7 days - hr din ke slots store krega .. 
 
    for (let i = 0; i < 7; i++) {    // yeh loop 7 bar chlega aur top to bottom hm ek run m ek day ko fix krrhe hoge 
      const currdate = new Date(today);
@@ -75,8 +75,8 @@ Setdocinfo(docinfo)
        starttime.setMinutes(starttime.getMinutes() + 30);
      }
 
-     if (timeslots.length) alldays.push(timeslots);
-   }
+     if (timeslots.length) alldays.push(timeslots);  // timeslots contain slots of one day .. 
+   }   // allday will contain slots of all 7 days 
 
    Setdocslots(alldays);
  };
@@ -159,7 +159,7 @@ useEffect(()=>{
 <p>Booking Slots</p>
 <div className='flex gap-3 items-center w-full overflow-x-scroll mt-4'>
   {
-    docslots.length && docslots.map((item , index )=>(
+    docslots.length && docslots.map((item , index )=>(  // item yaani ek pura din .. item[0] - us particular din ka phla slot..
       <div onClick={()=>Setslotindex(index)} key={index} className={`text-center py-6 min-w-16 rounded-full cursor-pointer ${slotindex===index? 'bg-primary text-white ':'border border-gray-200' }`}>
         <p>{item[0] && daysofweek[item[0].datetime.getDay()]}</p>
         <p>{item[0] && item[0].datetime.getDate()}</p>
@@ -169,10 +169,10 @@ useEffect(()=>{
 </div>
 
 <div className='flex items-center gap-3 w-full overflow-x-scroll mt-4'>
-{docslots.length && docslots[slotindex].map((item , index)=>(
+{docslots.length && docslots[slotindex].map((item , index)=>(   
 <p onClick={()=>Setslottime(item.time)}  className={`text-sm font-light flex-shrink-0 px-5 py-2 rounded-full cursor-pointer ${item.time===slottime?'bg-primary text-white' : 'text-gray-400 border border-gray-300' }`}  key={index}>
   {item.time.toLowerCase()}
-</p>
+</p> 
 ))}
 
 

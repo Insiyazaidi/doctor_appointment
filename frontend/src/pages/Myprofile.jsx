@@ -55,7 +55,8 @@ else{
 
 
 {
-  isedit?<input  className='bg-gray-50 text-3xl font-medium max-w-60 mt-4' type='text'value={userdata.name} onChange={e=>Setuserdata(prev=>({...prev , name:e.target.value}))}></input>:<p className=' font-medium text-3xl text-neutral-800 mt-4'>{userdata.name}</p>
+  isedit?<input  className='bg-gray-50 text-3xl font-medium max-w-60 mt-4' type='text'value={userdata.name} onChange={e=>Setuserdata(prev=>({...prev , name:e.target.value}))}></input>
+  :<p className=' font-medium text-3xl text-neutral-800 mt-4'>{userdata.name}</p>
 }
 <hr className='bg-zinc-400 h-[1px] border-none'/>
 <div>
